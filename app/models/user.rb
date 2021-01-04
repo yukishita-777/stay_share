@@ -5,4 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
          
   mount_uploader :image, ImageUploader
+  
+  # リレーション
+  has_many :rooms
+  has_many :registrations
 end
